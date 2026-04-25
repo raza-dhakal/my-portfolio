@@ -1,0 +1,151 @@
+:root {
+  --primary: #c7a17a;
+  --dark: #2c2a2a;
+  --white: #ffffff;
+  --gray: #f4f4f4;
+  --light-brown: #fdfaf7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+body {
+  background-color: var(--gray);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: var(--dark);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo span { color: var(--primary); }
+
+.nav-links { list-style: none; display: flex; }
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
+
+/* --- Hero Section Fix --- */
+.hero {
+  height: 100vh; /* Full screen height */
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px 20px 20px; /* Navbar को लागि माथि अलि खाली ठाउँ */
+}
+
+.hero-content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile Photo - यसलाई सानो र चिटिक्क पार्न */
+.profile-img {
+  width: 140px;  /* अलि सानो बनाइएको */
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  object-fit: cover;
+  margin-bottom: 15px; /* फोटो र नामको बीचको ग्याप कम गरिएको */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.hero h1 { 
+  font-size: 2.8rem; /* धेरै ठूलो नबनाउने */
+  margin-bottom: 5px; 
+  line-height: 1.2;
+}
+
+.hero p { 
+  font-size: 1.1rem; 
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.hero-btns { 
+  display: flex; 
+  gap: 15px; 
+  margin-top: 20px; /* बटनलाई अलि माथि ल्याउन */
+}
+
+/* मोबाइलको लागि अझ राम्रो मिलाउन */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .profile-img { width: 120px; height: 120px; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+}
+
+.btn { padding: 12px 30px; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; }
+.btn-github { background: #333; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; }
+
+/* --- Bio Details --- */
+.bio-details { padding: 80px 10%; background: var(--white); }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2.2rem; position: relative; }
+.section-title::after { content: ''; width: 50px; height: 3px; background: var(--primary); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+.bio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.bio-card { background: var(--light-brown); padding: 25px; border-radius: 10px; border-left: 5px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+.bio-card h3 { margin-bottom: 15px; color: var(--dark); }
+.bio-card ul { list-style: none; }
+.bio-card ul li { margin-bottom: 15px; border-bottom: 1px dashed #ddd; padding-bottom: 8px; }
+.bio-card ul li strong { color: #2c2a2a; }
+.bio-card ul li small { color: #666; font-size: 0.8rem; }
+
+.skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.skills-list span { background: var(--dark); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; display: flex; align-items: center; gap: 5px; }
+
+/* --- Projects --- */
+.projects { padding: 80px 10%; background: var(--gray); }
+.project-featured { display: flex; flex-wrap: wrap; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); margin-bottom: 40px; }
+.p-image { flex: 1; min-width: 300px; }
+.p-image img { width: 100%; height: 100%; object-fit: cover; }
+.p-content { flex: 1; padding: 40px; min-width: 300px; }
+
+.mini-projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.mini-card { background: var(--dark); color: white; padding: 25px; border-radius: 10px; text-align: center; }
+.mini-card i { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+.dl-link { color: var(--primary); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+/* --- Downloads --- */
+.download-section { padding: 80px 10%; background: var(--white); text-align: center; }
+.dl-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.dl-box { border: 2px solid #ddd; padding: 20px; width: 150px; border-radius: 10px; text-decoration: none; color: #333; transition: 0.3s; }
+.dl-box:hover { border-color: var(--primary); transform: translateY(-5px); }
+.dl-box i { font-size: 2.5rem; margin-bottom: 10px; }
+.pdf i { color: #e74c3c; }
+.excel i { color: #27ae60; }
+
+footer { background: var(--dark); color: white; text-align: center; padding: 40px 0; }
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .nav-links { display: none; }
+  .project-featured { flex-direction: column; }
+}

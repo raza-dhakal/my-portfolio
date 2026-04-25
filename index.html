@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajan Dhakal | Full-Stack Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">RD <span>PORTFOLIO</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bio">Profile</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#downloads">Resources</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="image/IMG_9648.jpg" alt="Rajan Dhakal" class="profile-img">
+            <h1>Hi, I'm <span>Rajan Dhakal</span></h1>
+            <p>Python Developer | Flask Specialist | Based in Japan</p>
+            <div class="hero-btns">
+                <a href="https://github.com/raza-dhakal/raza-dhakal" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub Profile</a>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+    </section>
+
+    <section id="bio" class="bio-details">
+        <h2 class="section-title">Academic & Professional Background</h2>
+        <div class="bio-grid">
+            
+            <div class="bio-card">
+                <h3><i class="fas fa-university"></i> Education (学歴)</h3>
+                <ul>
+                    <li>
+                        <strong>グローバルBiz専門職大学 (入学予定)</strong><br>
+                        <small>Global Biz Professional University | 2026.04 - Present</small>
+                    </li>
+                    <li>
+                        <strong>日本ウエルネスAI・IT・保育専門学校 (AI・コミュニケション卒業)</strong><br>
+                        <small>Japan Wellness AI/IT Vocational School | 2024.04 - 2026.03</small>
+                    </li>
+                    <li>
+                        <strong>福井ランゲージアカデミー (日本語学校 卒業)</strong><br>
+                        <small>Fukui Language Academy | 2022.09 - 2024.03</small>
+                    </li>
+                    <li>
+                        <strong>Shree Jagannath Higher Secondary School (Nepal)</strong><br>
+                        <small>High School Graduation | 2018.08 - 2020.09</small>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bio-card">
+                <h3><i class="fas fa-briefcase"></i> Work Experience (職歴)</h3>
+                <ul>
+                    <li>
+                        <strong>ファミリーマート広尾駅前店 (継続中)</strong><br>
+                        <small>FamilyMart Hiroo Station | 2025.06 - Present</small>
+                    </li>
+                    <li>
+                        <strong>蟻月 池袋東武店</strong><br>
+                        <small>Aridzuki Ikebukuro | 2024.03 - 2025.05</small>
+                    </li>
+                    <li>
+                        <strong>Citizens Bank International Limited (Nepal)</strong><br>
+                        <small>IT Internship | 2021.03 - 2022.03</small>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bio-card">
+                <h3><i class="fas fa-award"></i> Skills & Certs (資格)</h3>
+                <div class="skills-list">
+                    <span><i class="fab fa-python"></i> Python (Flask)</span>
+                    <span><i class="fas fa-database"></i> MySQL</span>
+                    <span><i class="fas fa-file-excel"></i> 日本情報処理技能検定 表計算 3級</span>
+                    <span><i class="fas fa-language"></i> Japanese JLPT N2 (Study in Progress)</span>
+                    <span><i class="fas fa-car"></i> Nepal Driving License</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+        
+        <div class="project-featured">
+            <div class="p-image">
+                <img src="image/rd-cafe-home.jpg" alt="RD Cafe System">
+            </div>
+            <div class="p-content">
+                <h3>RD Cafe Management System</h3>
+                <p>A high-performance cafe portal built with Flask & MySQL. Featuring secure OTP admin login, categorized menu management, and a seamless ordering system.</p>
+                <a href="https://rd-cafe-website.onrender.com" target="_blank" class="live-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="mini-projects-grid">
+            <div class="mini-card">
+                <i class="fas fa-gamepad"></i>
+                <h4>Pong Game (Python)</h4>
+                <p>Classic paddle game using Tkinter logic.</p>
+                <a href="paddle.py" download class="dl-link">Source Code <i class="fas fa-download"></i></a>
+            </div>
+            <div class="mini-card">
+                <i class="fas fa-car"></i>
+                <h4>Car Racing (Python)</h4>
+                <p>GUI-based car movement and road logic.</p>
+                <a href="car.py" download class="dl-link">Source Code <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads" class="download-section">
+        <h2 class="section-title">Resources & Documents</h2>
+        <div class="dl-container">
+            <a href="resume.pdf" download class="dl-box pdf">
+                <i class="fas fa-file-pdf"></i>
+                <span>Resume (PDF)</span>
+            </a>
+            <a href="excel.numbers" download class="dl-box excel">
+                <i class="fas fa-file-excel"></i>
+                <span>Excel 3級 Data</span>
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>© 2026 Rajan Dhakal | <i class="fas fa-envelope"></i> rindkl0424@gmail.com</p>
+        <p>Built with ❤️ and Flask</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
