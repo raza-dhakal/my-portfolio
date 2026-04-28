@@ -16,6 +16,7 @@
             <li><a href="#bio">Profile</a></li>
             <li><a href="#projects">Work</a></li>
             <li><a href="#downloads">Resources</a></li>
+            <li><a href="#feedback">Feedback</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -38,37 +39,23 @@
             <p>I am a dedicated <strong>Software Developer</strong> currently advancing my career in <strong>Japan</strong>. With a strong foundation in <strong>Python and Flask</strong>, I specialize in building functional, high-performance web systems. Beyond technical skills, I am an educator at <strong>@ITCodeHub</strong>, sharing insights into the world of IT and AI.</p>
         </div>
 
-        <div class="bio-card">
-    <h3><i class="fas fa-university"></i> Education</h3>
-    <ul>
-        <li>
-            <strong>グローバルBiz専門職大学</strong><br>
-            <small>Global Biz Professional University | 2026.04 - Entrance</small>
-        </li>
-        <li>
-            <strong>日本ウエルネスAI・IT・保育専門学校</strong><br>
-            <small>Japan Wellness AI/IT Vocational School | 2024.04 - 2026.03</small>
-        </li>
-        <li>
-            <strong>福井ランゲージアカデミー</strong><br>
-            <small>Fukui Language Academy | 2022.09 - 2024.03</small>
-        </li>
-    </ul>
-</div>
+        <div class="bio-container">
+            <div class="bio-card">
+                <h3><i class="fas fa-university"></i> Education (学歴)</h3>
+                <ul>
+                    <li><strong>グローバルBiz専門職大学</strong><br><small>Global Biz Professional University | 2026.04 - Entrance</small></li>
+                    <li><strong>日本ウエルネスAI・IT・保育専門学校</strong><br><small>Japan Wellness AI/IT Vocational School | 2024.04 - 2026.03</small></li>
+                    <li><strong>福井ランゲージアカデミー</strong><br><small>Fukui Language Academy | 2022.09 - 2024.03</small></li>
+                </ul>
+            </div>
 
-<div class="bio-card">
-    <h3><i class="fas fa-briefcase"></i> Experience</h3>
-    <ul>
-        <li>
-            <strong>ファミリーマート広尾駅前店</strong><br>
-            <small>FamilyMart Hiroo Station | 2025.06 - Present</small>
-        </li>
-        <li>
-            <strong>Citizens Bank International (Nepal)</strong><br>
-            <small> Citizens Bank International Internship | 2021 - 2022</small>
-        </li>
-    </ul>
-</div>
+            <div class="bio-card">
+                <h3><i class="fas fa-briefcase"></i> Experience (職歴)</h3>
+                <ul>
+                    <li><strong>ファミリーマート広尾駅前店</strong><br><small>FamilyMart Hiroo Station | 2025.06 - Present</small></li>
+                    <li><strong>Citizens Bank International (Nepal)</strong><br><small>Citizens Bank International Internship | 2021 - 2022</small></li>
+                </ul>
+            </div>
 
             <div class="bio-card">
                 <h3><i class="fas fa-award"></i> Skills & Certs</h3>
@@ -104,7 +91,6 @@
                 <p>Download Resume</p>
                 <small>(PDF or Excel)</small>
             </div>
-    
             <div class="dl-item" onclick="verifyAndDownload('database')">
                 <i class="fas fa-database"></i>
                 <p>Database Project</p>
@@ -113,15 +99,46 @@
         </div>
     </section>
 
+    <section id="feedback" class="feedback-section">
+        <h2 class="section-title">Testimonials & Feedback</h2>
+        <div class="feedback-container">
+            <div class="feedback-card">
+                <div class="stars">⭐⭐⭐⭐⭐ 5.0</div>
+                <p>"Excellent developer with great attention to detail. Highly recommended!"</p>
+                <h4>- Tanaka-san (Japan)</h4>
+            </div>
+            <div class="feedback-card">
+                <div class="stars">⭐⭐⭐⭐⭐ 5.0</div>
+                <p>"The Cafe System is professional and runs smoothly. Great job!"</p>
+                <h4>- Hiroshi Moto</h4>
+            </div>
+            <div class="feedback-card">
+                <div class="stars">⭐⭐⭐⭐⭐ 4.9</div>
+                <p>"Very reliable and has deep technical knowledge in Python."</p>
+                <h4>- S. Raut (Nepal)</h4>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact-section">
         <h2 class="section-title">Connect With Me</h2>
-        <div class="social-icons">
-            <a href="https://www.youtube.com/@ITCodeHub" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.facebook.com/razan.dhakal.712" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/its_me_ra_za_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@its_me_rsbd0" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <div class="social-buttons">
+            <a href="https://www.youtube.com/@ITCodeHub" target="_blank" class="social-btn youtube">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a href="https://www.facebook.com/razan.dhakal.712" target="_blank" class="social-btn facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://www.instagram.com/its_me_ra_za_/" target="_blank" class="social-btn instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@its_me_rsbd0" target="_blank" class="social-btn tiktok">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+            <a href="mailto:rindkl0424@gmail.com" class="social-btn email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
         </div>
-        <p class="email-info"><i class="fas fa-envelope"></i> rindkl0424@gmail.com</p>
     </section>
 
     <footer>
@@ -129,12 +146,24 @@
     </footer>
 
     <script>
-        function verifyResume() {
+        function verifyAndDownload(type) {
             let code = prompt("Please enter the Verification Code (Hint: RD....):");
+            
             if (code === "RDCAFE") {
-                alert("Access Granted!");
-                window.open("image/resume.pdf", "_blank");
-            } else {
+                if (type === 'resume') {
+                    let choice = prompt("Type '1' for PDF\nType '2' for Excel (xlsx)");
+                    if (choice === "1") {
+                        window.open("image/resume.pdf", "_blank");
+                    } else if (choice === "2") {
+                        window.open("image/resume.xlsx", "_blank");
+                    } else {
+                        alert("Invalid choice.");
+                    }
+                } else if (type === 'database') {
+                    alert("Access Granted! Opening Database Project File...");
+                    window.open("image/excel.numbers", "_blank");
+                }
+            } else if (code !== null) {
                 alert("Incorrect Code. Access Denied.");
             }
         }
