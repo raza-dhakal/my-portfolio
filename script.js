@@ -48,9 +48,9 @@ function verifyAndDownload(type) {
             }
         } 
         else if (type === 'database') {
-            // Database Project को लागि Excel.numbers फाइल खोल्ने
+            // Database Project को लागि excel.numbers फाइल खोल्ने
             alert("Access Granted! Opening Database Project File...");
-            window.open("image/excell.numbers", "_blank");
+            window.open("image/excel.numbers", "_blank");
         }
     } 
     else if (code === null) {
