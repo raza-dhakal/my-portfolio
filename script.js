@@ -1,5 +1,4 @@
 // 1. Navbar Scroll Effect
-// स्क्रोल गर्दा नभबारको रङ र साइज बदल्ने
 window.addEventListener("scroll", function() {
     let nav = document.querySelector(".navbar");
     if (window.scrollY > 50) {
@@ -14,7 +13,6 @@ window.addEventListener("scroll", function() {
 });
 
 // 2. Smooth Scrolling for Navigation Links
-// मेनुमा क्लिक गर्दा बिस्तारै (Smoothly) गुड्ने
 document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -23,7 +21,7 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
         
         if (targetSection) {
             window.scrollTo({
-                top: targetSection.offsetTop - 70, // नभबारको हाइट छोडेर
+                top: targetSection.offsetTop - 70,
                 behavior: 'smooth'
             });
         }
@@ -31,45 +29,61 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
 });
 
 // 3. Centralized Verification and Download Logic
-// पासवर्ड चेक गर्ने र फाइल डाउनलोड गराउने मुख्य फङ्सन
 function verifyAndDownload(type) {
     let code = prompt("Please enter the Verification Code (Hint: RD....):");
 
     if (code === "RDCAFE") {
-        if (type === 'resume') {
-            // रिजुमेको फर्म्याट सोध्ने
-            let choice = prompt("Which format would you like?\nType '1' for PDF\nType '2' for Excel (xlsx)");
+        let filePath = "";
+        let fileName = "";
 
+        if (type === 'resume') {
+            let choice = prompt("Which format would you like?\nType '1' for PDF\nType '2' for Excel (xlsx)");
             if (choice === "1") {
-                alert("Access Granted! Opening Resume PDF...");
-                window.open("image/resume.pdf", "_blank");
+                filePath = "image/resume.pdf";
+                fileName = "Rajan_Dhakal_Resume.pdf";
             } else if (choice === "2") {
-                alert("Access Granted! Downloading Resume Excel...");
-                window.open("image/resume.xlsx", "_blank");
+                filePath = "image/resume.xlsx";
+                fileName = "Rajan_Dhakal_Resume.xlsx";
             } else {
                 alert("Invalid choice. Please enter 1 or 2.");
+                return;
             }
         } 
         else if (type === 'database') {
-            // डेटाबेस प्रोजेक्ट फाइल खोल्ने
-            alert("Access Granted! Opening Database Project File...");
-            window.open("image/excel.numbers", "_blank");
+            filePath = "image/excel.numbers";
+            fileName = "Database_Project.numbers";
+        }
+
+        if (filePath !== "") {
+            downloadFile(filePath, fileName);
         }
     } 
     else if (code === null) {
-        return; // क्यान्सल थिचेमा केही नगर्ने
+        return; 
     } 
     else {
         alert("Incorrect Code. Access Denied.");
     }
 }
 
-// 4. Console Welcome Message (Developer Feel)
+// फाइल डाउनलोड गराउने बलियो फङ्सन
+function downloadFile(path, name) {
+    const link = document.createElement('a');
+    link.href = path;
+    link.target = '_blank';
+    link.download = name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    alert("Downloading started...");
+}
+
+// 4. Console Welcome Message
 console.log("%c RD PORTFOLIO ", "background: #DEFF9A; color: #000; font-size: 20px; font-weight: bold; border-radius: 5px; padding: 5px;");
 console.log("Status: System Online | Based in Japan");
 console.log("Welcome to Rajan Dhakal's Portfolio Console!");
 
-// 5. Bonus: Active Link Highlighter (स्क्रोल गर्दा कुन सेक्सनमा छ हाइलाइट गर्ने)
+// 5. Active Link Highlighter
 window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
     document.querySelectorAll('section').forEach((section, i) => {
@@ -77,7 +91,8 @@ window.addEventListener('scroll', () => {
             document.querySelectorAll('.nav-links a').forEach((a) => {
                 a.style.color = "white";
             });
-            document.querySelectorAll('.nav-links a')[i].style.color = "#DEFF9A";
+            let activeLink = document.querySelectorAll('.nav-links a')[i];
+            if (activeLink) activeLink.style.color = "#DEFF9A";
         }
     });
 });
