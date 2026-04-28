@@ -50,15 +50,14 @@ body {
 }
 .nav-links li a:hover { color: var(--primary); }
 
-/* --- Hero Section (Using your Custom BG) --- */
+/* --- Hero Section --- */
 .hero {
   height: 100vh;
-  /* तपाईंले सेभ गरेको Clean BG Photo यहाँ लोड हुन्छ */
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
               url('image/it.bg.png'); 
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effect */
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +79,6 @@ body {
   font-size: 3.5rem;
   margin-bottom: 10px;
 }
-
 .hero h1 span { color: var(--primary); }
 
 .hero-btns { 
@@ -117,11 +115,11 @@ body {
   border-color: white;
 }
 
-/* --- Bio Details --- */
+/* --- Bio Details & Cards --- */
 .bio-details { padding: 100px 10%; background: var(--gray); }
 .section-title { text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: var(--primary); }
 
-.bio-grid { 
+.bio-container { 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 30px; 
@@ -164,48 +162,70 @@ body {
 .p-image img { width: 100%; height: 100%; object-fit: cover; }
 .p-content { flex: 1; padding: 50px; }
 
-.live-btn {
-  display: inline-block;
-  margin-top: 20px;
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid var(--primary);
-}
-
-/* --- Downloads & Contact --- */
+/* --- Resources/Downloads --- */
 .download-section { padding: 100px 10%; text-align: center; background: var(--gray); }
 .dl-container { display: flex; justify-content: center; gap: 40px; margin-top: 40px; }
-
 .dl-item { 
   text-align: center; 
-  color: white; 
-  text-decoration: none; 
+  cursor: pointer;
   transition: 0.3s;
 }
 .dl-item i { font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
-.dl-item:hover { transform: scale(1.1); }
+.dl-item:hover { transform: scale(1.1); color: var(--primary); }
 
-.contact-info {
-  padding: 60px 10%;
-  text-align: center;
-  background: var(--dark);
+/* --- NEW: Feedback Section (Star Ratings) --- */
+.feedback-section { padding: 100px 10%; background: var(--dark); }
+.feedback-container { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 25px; 
 }
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.social-links a {
-  font-size: 2rem;
-  color: white;
+.feedback-card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid var(--primary);
   transition: 0.3s;
 }
-.social-links a:hover { color: var(--primary); transform: translateY(-5px); }
+.feedback-card:hover { background: #222; transform: translateY(-5px); }
+.stars { color: #FFD700; font-size: 1.2rem; margin-bottom: 10px; }
+.feedback-card p { font-style: italic; font-size: 0.95rem; margin-bottom: 15px; }
+.feedback-card h4 { color: var(--primary); font-size: 1rem; }
 
+/* --- NEW: Centered Connect Section & Buttons --- */
+.contact-section { 
+  text-align: center; 
+  padding: 100px 10%; 
+  background: var(--gray); 
+}
+.social-buttons { 
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 15px; 
+  margin-top: 40px; 
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  border-radius: 10px;
+  background: #0f0f0f;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid rgba(222, 255, 154, 0.3);
+  transition: 0.3s;
+}
+.social-btn:hover {
+  background: var(--primary);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(222, 255, 154, 0.3);
+}
+
+/* Footer */
 footer { background: #000; color: #666; text-align: center; padding: 40px 0; font-size: 0.9rem; }
 
 /* Mobile Optimization */
@@ -214,4 +234,6 @@ footer { background: #000; color: #666; text-align: center; padding: 40px 0; fon
   .nav-links { display: none; }
   .project-featured { flex-direction: column; }
   .dl-container { flex-direction: column; gap: 30px; }
+  .social-buttons { flex-direction: column; align-items: center; }
+  .social-btn { width: 80%; justify-content: center; }
 }
