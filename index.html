@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajan Dhakal | Python Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">RD <span>PORTFOLIO</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bio">Profile</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#downloads">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="image/IMG_9648.jpg" alt="Rajan Dhakal" class="profile-img">
+            <h1>Hi, I'm <span>Rajan Dhakal</span></h1>
+            <p>Python Developer | Flask Specialist | Based in Japan</p>
+            <div class="hero-btns">
+                <a href="https://github.com/raza-dhakal" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub Profile</a>
+                <button onclick="verifyResume()" class="btn">View Resume</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="bio" class="bio-details">
+        <h2 class="section-title">Professional Profile</h2>
+        <div class="about-text-box">
+            <p>I am a dedicated <strong>Software Developer</strong> currently advancing my career in <strong>Japan</strong>. With a strong foundation in <strong>Python and Flask</strong>, I specialize in building functional, high-performance web systems. Beyond technical skills, I am an educator at <strong>@ITCodeHub</strong>, sharing insights into the world of IT and AI.</p>
+        </div>
+
+        <div class="bio-grid">
+            <div class="bio-card">
+                <h3><i class="fas fa-university"></i> Education</h3>
+                <ul>
+                    <li><strong>Global Biz Professional University</strong><br><small>2026.04 - Present (Entrance Scheduled)</small></li>
+                    <li><strong>Japan Wellness AI/IT Vocational School</strong><br><small>2024.04 - 2026.03</small></li>
+                    <li><strong>Fukui Language Academy</strong><br><small>2022.09 - 2024.03</small></li>
+                </ul>
+            </div>
+
+            <div class="bio-card">
+                <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                <ul>
+                    <li><strong>FamilyMart Hiroo Station</strong><br><small>Retail Operations | 2025.06 - Present</small></li>
+                    <li><strong>Citizens Bank International (Nepal)</strong><br><small>IT Internship | 2021 - 2022</small></li>
+                </ul>
+            </div>
+
+            <div class="bio-card">
+                <h3><i class="fas fa-award"></i> Skills & Certs</h3>
+                <div class="skills-list">
+                    <span><i class="fab fa-python"></i> Python (Flask)</span>
+                    <span><i class="fas fa-database"></i> MySQL</span>
+                    <span><i class="fas fa-file-excel"></i> Excel Level 3 (Japan)</span>
+                    <span><i class="fas fa-language"></i> Japanese JLPT N2 (Target)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="project-featured">
+            <div class="p-image">
+                <img src="image/rd-cafe-home.jpg" alt="RD Cafe System">
+            </div>
+            <div class="p-content">
+                <h3>RD Cafe Management System</h3>
+                <p>A full-stack cafe portal featuring secure admin dashboards, menu management, and real-time ordering logic.</p>
+                <a href="https://rd-cafe-website.onrender.com" target="_blank" class="live-btn">Live Preview <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads" class="download-section">
+        <h2 class="section-title">Resources & Documents</h2>
+        <div class="dl-container">
+            <div class="dl-item" onclick="verifyAndDownload('resume')">
+                <i class="fas fa-file-pdf"></i>
+                <p>Download Resume</p>
+                <small>(PDF or Excel)</small>
+            </div>
+    
+            <div class="dl-item" onclick="verifyAndDownload('database')">
+                <i class="fas fa-database"></i>
+                <p>Database Project</p>
+                <small>(Excel.numbers File)</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Connect With Me</h2>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@ITCodeHub" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/razan.dhakal.712" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/its_me_ra_za_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@its_me_rsbd0" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="email-info"><i class="fas fa-envelope"></i> rindkl0424@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Rajan Dhakal | Built with Passion in Japan.</p>
+    </footer>
+
+    <script>
+        function verifyResume() {
+            let code = prompt("Please enter the Verification Code (Hint: RD....):");
+            if (code === "RDCAFE") {
+                alert("Access Granted!");
+                window.open("image/resume.pdf", "_blank");
+            } else {
+                alert("Incorrect Code. Access Denied.");
+            }
+        }
+    </script>
+</body>
+</html>
